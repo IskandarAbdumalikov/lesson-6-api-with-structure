@@ -35,7 +35,20 @@ const Home = () => {
   };
 
   if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (error)
+    return (
+      <p>
+        Login qilib kirishni unutmang{" "}
+        <li style={{ display: "flex", gap: "40px", alignItems: "center" }}>
+          <Link style={{ fontSize: "20px", color: "blue" }} to="/login">
+            Login
+          </Link>
+          <Link style={{ fontSize: "20px", color: "blue" }} to={"/register"}>
+            Register
+          </Link>
+        </li>
+      </p>
+    );
 
   return (
     <div className="user-management-container">
